@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitação</title>
+    <style>
+        * {
+            text-align: center;
+            font: normal 15pt Arial;
+        }
+        
+        body {
+            width: 500px;
+            height: 1000pxpx;
+        }
+        
+        h1 {
+            font-size: 24pt;
+            font-weight: bold;
+        }
+        
+        #comecar {
+            margin-bottom: 10px;
+            background-color: rgb(209, 204, 197);
+            border: none;
+            width: 100px;
+            height: 30px;
+        }
+        
+        #jogo {
+            width: 500px;
+            height: 300px;
+            background-color: lightgray;
+        }
+        
+        #palavra {
+            color: gray;
+            display: flex;
+            font: normal 30pt Arial;
+            width: 500px;
+            height: 240px;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #tempo {
+            width: 150px;
+            height: 60px;
+            display: inline-block;
+            margin-right: 194px;
+            text-align: center;
+        }
+        
+        #acertos {
+            width: 150px;
+            height: 60px;
+            display: inline-block;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Jogo da Digitação</h1>
+    <p>Tente digitar o máximo de palavras em um minuto!</p>
+    <button id="comecar" onclick="comeca()">Começar</button>
+    <div id="jogo">
+        <div id="palavra"></div>
+        <div id="tempo"></div>
+        <div id="acertos"></div>
+    </div>
+
+
+</body>
+
+
+<script>
+    tempo = window.document.getElementById('tempo');
+
+
+    function comeca() {
+        palavra = window.document.getElementById('palavra');
+        acertos = window.document.getElementById('acertos');
+        window.document.getElementById('comecar').style.display = 'none';
+        bancoDePalavras = ['Forever', 'Felps', 'Pac', 'Mike', 'Cellbit', 'Richarlyson'];
+
+
+        do {
+            aleatorio = parseInt(Math.random() * 6);
+            palavra.innerHTML = bancoDePalavras[aleatorio];
+
+
+
+
+
+
+            x = 0;
+        } while (x != 0);
+
+
+
+
+
+
+
+
+
+
+    }
+</script>
+
+
+</html>

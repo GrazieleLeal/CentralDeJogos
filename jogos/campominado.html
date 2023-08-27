@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo minado</title>
+    <style>
+        td {
+            width: 50px;
+            height: 50px;
+            background-color: lightgray;
+        }
+        
+        #comeca {
+            font: normal 20pt Arial;
+            margin-left: 180px;
+            background-color: blanchedalmond;
+            border: none;
+            width: 130px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <table>
+        <button id="comeca" onclick="comeca()">Começar</button>
+        <tr>
+            <td class="campo" id="t11"></td>
+            <td class="campo" id="t12"></td>
+            <td class="campo" id="t13"></td>
+            <td class="campo" id="t14"></td>
+            <td class="campo" id="t15"></td>
+            <td class="campo" id="t16"></td>
+            <td class="campo" id="t17"></td>
+            <td class="campo" id="t18"></td>
+            <td class="campo" id="t19"></td>
+        </tr>
+        <tr>
+            <td class="campo" id="t21"></td>
+            <td class="campo" id="t22"></td>
+            <td class="campo" id="t23"></td>
+            <td class="campo" id="t24"></td>
+            <td class="campo" id="t25"></td>
+            <td class="campo" id="t26"></td>
+            <td class="campo" id="t27"></td>
+            <td class="campo" id="t28"></td>
+            <td class="campo" id="t29"></td>
+        </tr>
+        <tr>
+            <td class="campo" id="t31"></td>
+            <td class="campo" id="t32"></td>
+            <td class="campo" id="t33"></td>
+            <td class="campo" id="t34"></td>
+            <td class="campo" id="t35"></td>
+            <td class="campo" id="t36"></td>
+            <td class="campo" id="t37"></td>
+            <td class="campo" id="t38"></td>
+            <td class="campo" id="t39"></td>
+        </tr>
+        <tr>
+            <td class="campo" id="t41"></td>
+            <td class="campo" id="t42"></td>
+            <td class="campo" id="t43"></td>
+            <td class="campo" id="t44"></td>
+            <td class="campo" id="t45"></td>
+            <td class="campo" id="t46"></td>
+            <td class="campo" id="t47"></td>
+            <td class="campo" id="t48"></td>
+            <td class="campo" id="t49"></td>
+        </tr>
+        <tr>
+            <td class="campo" id="t51"></td>
+            <td class="campo" id="t52"></td>
+            <td class="campo" id="t53"></td>
+            <td class="campo" id="t54"></td>
+            <td class="campo" id="t55"></td>
+            <td class="campo" id="t56"></td>
+            <td class="campo" id="t57"></td>
+            <td class="campo" id="t58"></td>
+            <td class="campo" id="t59"></td>
+        </tr>
+        <tr>
+            <td class="campo" id="t61"></td>
+            <td class="campo" id="t62"></td>
+            <td class="campo" id="t63"></td>
+            <td class="campo" id="t64"></td>
+            <td class="campo" id="t65"></td>
+            <td class="campo" id="t66"></td>
+            <td class="campo" id="t67"></td>
+            <td class="campo" id="t68"></td>
+            <td class="campo" id="t69"></td>
+        </tr>
+        <tr>
+            <td class="campo" id="t71"></td>
+            <td class="campo" id="t72"></td>
+            <td class="campo" id="t73"></td>
+            <td class="campo" id="t74"></td>
+            <td class="campo" id="t75"></td>
+            <td class="campo" id="t76"></td>
+            <td class="campo" id="t77"></td>
+            <td class="campo" id="t78"></td>
+            <td class="campo" id="t79"></td>
+        </tr>
+        <tr>
+            <td class="campo" id="t81"></td>
+            <td class="campo" id="t82"></td>
+            <td class="campo" id="t83"></td>
+            <td class="campo" id="t84"></td>
+            <td class="campo" id="t85"></td>
+            <td class="campo" id="t86"></td>
+            <td class="campo" id="t87"></td>
+            <td class="campo" id="t88"></td>
+            <td class="campo" id="t89"></td>
+        </tr>
+        <tr>
+            <td class="campo" id="t91"></td>
+            <td class="campo" id="t92"></td>
+            <td class="campo" id="t93"></td>
+            <td class="campo" id="t94"></td>
+            <td class="campo" id="t95"></td>
+            <td class="campo" id="t96"></td>
+            <td class="campo" id="t97"></td>
+            <td class="campo" id="t98"></td>
+            <td class="campo" id="t99"></td>
+        </tr>
+    </table>
+</body>
+
+
+<script>
+    td = [window.document.getElementById('t11'), window.document.getElementById('t12'), window.document.getElementById('t13'), window.document.getElementById('t14'), window.document.getElementById('t15'), window.document.getElementById('t16'), window.document.getElementById('t17'), window.document.getElementById('t18'), window.document.getElementById('t19'), window.document.getElementById('t21'), window.document.getElementById('t22'), window.document.getElementById('t23'), window.document.getElementById('t24'), window.document.getElementById('t25'), window.document.getElementById('t26'), window.document.getElementById('t27'), window.document.getElementById('t28'), window.document.getElementById('t29'), window.document.getElementById('t31'), window.document.getElementById('t32'), window.document.getElementById('t33'), window.document.getElementById('t34'), window.document.getElementById('t35'), window.document.getElementById('t36'), window.document.getElementById('t37'), window.document.getElementById('t38'), window.document.getElementById('t39'), window.document.getElementById('t41'), window.document.getElementById('t42'), window.document.getElementById('t43'), window.document.getElementById('t44'), window.document.getElementById('t45'), window.document.getElementById('t46'), window.document.getElementById('t47'), window.document.getElementById('t48'), window.document.getElementById('t49'), window.document.getElementById('t51'), window.document.getElementById('t52'), window.document.getElementById('t53'), window.document.getElementById('t54'), window.document.getElementById('t55'), window.document.getElementById('t56'), window.document.getElementById('t57'), window.document.getElementById('t58'), window.document.getElementById('t59'), window.document.getElementById('t61'), window.document.getElementById('t62'), window.document.getElementById('t63'), window.document.getElementById('t64'), window.document.getElementById('t65'), window.document.getElementById('t66'), window.document.getElementById('t67'), window.document.getElementById('t68'), window.document.getElementById('t69'), window.document.getElementById('t71'), window.document.getElementById('t72'), window.document.getElementById('t73'), window.document.getElementById('t74'), window.document.getElementById('t75'), window.document.getElementById('t76'), window.document.getElementById('t77'), window.document.getElementById('t78'), window.document.getElementById('t79'), window.document.getElementById('t81'), window.document.getElementById('t82'), window.document.getElementById('t83'), window.document.getElementById('t84'), window.document.getElementById('t85'), window.document.getElementById('t86'), window.document.getElementById('t87'), window.document.getElementById('t88'), window.document.getElementById('t89'), window.document.getElementById('t91'), window.document.getElementById('t92'), window.document.getElementById('t93'), window.document.getElementById('t94'), window.document.getElementById('t95'), window.document.getElementById('t96'), window.document.getElementById('t97'), window.document.getElementById('t98'), window.document.getElementById('t99')];
+
+
+    function comeca() {
+        bomba = 10;
+        window.document.getElementById('comeca').style.display = 'none';
+        bombas = [];
+        for (i = 0; i <= td.length; i++) {
+            let aleatorio = parseInt(Math.random() * 2);
+            if (aleatorio == 1) {
+                if (td[(i) - 1].style.background == 'red') {
+                    continue;
+                } else {
+                    let aleatorio = parseInt(Math.random() * 2);
+                    if (aleatorio == 1) {
+                        let aleatorio = parseInt(Math.random() * 2);
+                        if (aleatorio == 1) {
+                            bombas.push(i);
+                            td[i].style.background = 'red';
+                            bomba--;
+                        } else {
+                            continue;
+                        }
+                    } else {
+                        continue;
+                    }
+
+
+                }
+            }
+            if (bomba == 0) {
+                break;
+            }
+        } //for de criação de bombas
+        //for criando bombas
+
+
+
+
+    }
+</script>
+
+
+</html>

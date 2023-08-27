@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reação</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+        
+        #jogo {
+            background-color: lightgray;
+            width: 300px;
+            Height: 200px;
+            text-align: center;
+            line-height: 190px;
+        }
+        
+        #chance {
+            font: normal 17pt Arial
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Jogo da reação!</h1>
+    <p>Tente apertar no botão verde o mais rápido o possível!</p>
+    <p id="chance">Você terá 5 chances para clicar no verde</p>
+    <div id="jogo">Começar</div>
+</body>
+
+
+<script>
+    jogo = window.document.getElementById('jogo');
+
+
+    jogo.addEventListener('click', comecar, false);
+
+
+    //inicio = performance.now();
+
+
+    function comecar() {
+
+
+        jogo.innerHTML = "";
+        jogo.style.background = 'red';
+
+
+        function verde() {
+            jogo.style.background = 'green';
+
+
+            jogo.addEventListener('click', ganhar, false);
+
+
+            function ganhar() {
+                jogo.style.background = 'gray';
+                jogo.innerHTML = "Você venceu!";
+            }
+        }
+
+
+        tempo = Math.random() * 2000;
+        setTimeout(verde, tempo);
+
+
+        function vermelho() {
+            jogo.style.background = 'red';
+            jogo.addEventListener('click', perder, false);
+
+
+            function perder() {
+                jogo.style.background = 'gray';
+                jogo.innerHTML = "Perdeu...";
+            }
+        }
+        jogo.style.background = 'gray';
+
+
+
+
+        tempo = Math.random() * 1000;
+        setTimeout(vermelho, tempo);
+    }
+
+
+    //fim = performance.now();
+    //alert(fim - inicio);
+</script>
+
+
+</html>
